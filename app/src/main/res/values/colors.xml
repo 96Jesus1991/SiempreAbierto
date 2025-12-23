@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Colores principales - Tema oscuro para carretera -->
+    <color name="primary">#FF1E88E5</color>
+    <color name="primary_dark">#FF1565C0</color>
+    <color name="primary_light">#FF42A5F5</color>
+    
+    <!-- Acento - Naranja carretera -->
+    <color name="accent">#FFFF6D00</color>
+    <color name="accent_dark">#FFE65100</color>
+    <color name="accent_light">#FFFF9100</color>
+    
+    <!-- Fondo oscuro -->
+    <color name="background_dark">#FF121212</color>
+    <color name="background_surface">#FF1E1E1E</color>
+    <color name="background_card">#FF2D2D2D</color>
+    
+    <!-- Fondo claro (modo día) -->
+    <color name="background_light">#FFF5F5F5</color>
+    <color name="background_surface_light">#FFFFFFFF</color>
+    
+    <!-- Textos -->
+    <color name="text_primary">#FFFFFFFF</color>
+    <color name="text_secondary">#B3FFFFFF</color>
+    <color name="text_hint">#66FFFFFF</color>
+    <color name="text_dark">#FF212121</color>
+    <color name="text_dark_secondary">#FF757575</color>
+    
+    <!-- Estados -->
+    <color name="success">#FF4CAF50</color>
+    <color name="warning">#FFFFC107</color>
+    <color name="error">#FFF44336</color>
+    <color name="info">#FF2196F3</color>
+    
+    <!-- Emergencia -->
+    <color name="emergency_red">#FFFF1744</color>
+    <color name="emergency_red_dark">#FFD50000</color>
+    <color name="emergency_background">#33FF1744</color>
+    
+    <!-- Categorías -->
+    <color name="cat_workshop">#FF5C6BC0</color>
+    <color name="cat_gas_station">#FF26A69A</color>
+    <color name="cat_parking">#FF7E57C2</color>
+    <color name="cat_food">#FFEF5350</color>
+    <color name="cat_rest">#FF42A5F5</color>
+    <color name="cat_wash">#FF29B6F6</color>
+    
+    <!-- Mapa -->
+    <color name="map_route">#FF1E88E5</color>
+    <color name="map_route_alt">#66666666</color>
+    <color name="map_marker">#FFFF6D00</color>
+    <color name="map_restriction">#FFFF5252</color>
+    <color name="map_user_location">#FF4CAF50</color>
+    
+    <!-- Vehículos -->
+    <color name="vehicle_car">#FF42A5F5</color>
+    <color name="vehicle_truck">#FFFF7043</color>
+    <color name="vehicle_bus">#FF66BB6A</color>
+    <color name="vehicle_camper">#FFAB47BC</color>
+    
+    <!-- Comunidad -->
+    <color name="community_verified">#FF4CAF50</color>
+    <color name="community_pending">#FFFFC107</color>
+    <color name="community_helper">#FF1E88E5</color>
+    
+    <!-- Bordes y divisores -->
+    <color name="divider">#1FFFFFFF</color>
+    <color name="divider_light">#1F000000</color>
+    <color name="border">#33FFFFFF</color>
+    
+    <!-- Ripple / Click -->
+    <color name="ripple_dark">#33FFFFFF</color>
+    <color name="ripple_light">#33000000</color>
+    
+    <!-- Transparentes -->
+    <color name="transparent">#00000000</color>
+    <color name="black_overlay">#80000000</color>
+    <color name="white_overlay">#80FFFFFF</color>
+
+</resources>
