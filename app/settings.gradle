@@ -1,0 +1,72 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "SiempreAbierto"
+
+// Módulo principal
+include ':app'
+
+// Asset Packs - Mapas por regiones (dentro de app/)
+include ':maps_andalucia'
+project(':maps_andalucia').projectDir = new File('app/maps_andalucia')
+
+include ':maps_aragon'
+project(':maps_aragon').projectDir = new File('app/maps_aragon')
+
+include ':maps_asturias'
+project(':maps_asturias').projectDir = new File('app/maps_asturias')
+
+include ':maps_baleares'
+project(':maps_baleares').projectDir = new File('app/maps_baleares')
+
+include ':maps_canarias'
+project(':maps_canarias').projectDir = new File('app/maps_canarias')
+
+include ':maps_cantabria'
+project(':maps_cantabria').projectDir = new File('app/maps_cantabria')
+
+include ':maps_castilla_la_mancha'
+project(':maps_castilla_la_mancha').projectDir = new File('app/maps_castilla_la_mancha')
+
+include ':maps_castilla_y_leon'
+project(':maps_castilla_y_leon').projectDir = new File('app/maps_castilla_y_leon')
+
+include ':maps_cataluna'
+project(':maps_cataluna').projectDir = new File('app/maps_cataluna')
+
+include ':maps_extremadura'
+project(':maps_extremadura').projectDir = new File('app/maps_extremadura')
+
+include ':maps_galicia'
+project(':maps_galicia').projectDir = new File('app/maps_galicia')
+
+include ':maps_la_rioja'
+project(':maps_la_rioja').projectDir = new File('app/maps_la_rioja')
+
+include ':maps_madrid'
+project(':maps_madrid').projectDir = new File('app/maps_madrid')
+
+include ':maps_murcia'
+project(':maps_murcia').projectDir = new File('app/maps_murcia')
+
+include ':maps_navarra'
+project(':maps_navarra').projectDir = new File('app/maps_navarra')
+
+include ':maps_pais_vasco'
+project(':maps_pais_vasco').projectDir = new File('app/maps_pais_vasco')
+
+include ':maps_valenciana'
+project(':maps_valenciana').projectDir = new File('app/maps_valenciana')
