@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Nombre de la app -->
+    <string name="app_name">Siempre Abierto</string>
+    <string name="app_subtitle">Comunidad en Ruta - OFFLINE</string>
+
+    <!-- Navegación principal -->
+    <string name="nav_home">Inicio</string>
+    <string name="nav_map">Mapa</string>
+    <string name="nav_emergency">Emergencia</string>
+    <string name="nav_community">Comunidad</string>
+    <string name="nav_settings">Ajustes</string>
+
+    <!-- Pantalla de inicio -->
+    <string name="home_welcome">Bienvenido a Siempre Abierto</string>
+    <string name="home_description">Tu guía de carretera 100% offline</string>
+
+    <!-- Categorías principales -->
+    <string name="cat_workshops">Talleres</string>
+    <string name="cat_workshops_24h">Talleres 24h</string>
+    <string name="cat_tow_trucks">Grúas</string>
+    <string name="cat_gas_stations">Gasolineras</string>
+    <string name="cat_car_wash">Lavaderos Coche</string>
+    <string name="cat_truck_wash">Lavaderos Camión/Bus</string>
+    <string name="cat_vacuum">Aspiradores</string>
+    <string name="cat_parking">Parkings</string>
+    <string name="cat_parking_truck">Parkings Camión</string>
+    <string name="cat_rest_area">Zonas Descanso</string>
+    <string name="cat_showers">Duchas</string>
+    <string name="cat_supermarket">Supermercados 24h</string>
+    <string name="cat_bars">Bares Nocturnos</string>
+    <string name="cat_cafes">Cafeterías Tempranas</string>
+
+    <!-- Emergencias -->
+    <string name="emergency_title">¡EMERGENCIA!</string>
+    <string name="emergency_button">ME QUEDÉ TIRADO</string>
+    <string name="emergency_select_problem">Selecciona tu problema:</string>
+    <string name="problem_battery">Batería descargada</string>
+    <string name="problem_flat_tire">Pinchazo</string>
+    <string name="problem_wont_start">No arranca</string>
+    <string name="problem_brakes">Problema de frenos</string>
+    <string name="problem_overheating">Sobrecalentamiento</string>
+    <string name="problem_fuel">Sin combustible</string>
+    <string name="problem_other">Otro problema</string>
+
+    <!-- Restricciones de vehículos -->
+    <string name="restrictions_title">Restricciones</string>
+    <string name="restriction_height">Altura máx:</string>
+    <string name="restriction_width">Ancho máx:</string>
+    <string name="restriction_weight">Peso máx:</string>
+    <string name="restriction_warning">Información orientativa aportada por la comunidad. Verifica siempre la señalización vial.</string>
+
+    <!-- Filtros de vehículo -->
+    <string name="vehicle_car">Coche</string>
+    <string name="vehicle_truck">Camión</string>
+    <string name="vehicle_bus">Autobús</string>
+    <string name="vehicle_camper">Camper/Alto</string>
+
+    <!-- Mapas -->
+    <string name="maps_title">Mapas Offline</string>
+    <string name="maps_download">Descargar</string>
+    <string name="maps_downloaded">Descargado</string>
+    <string name="maps_delete">Eliminar</string>
+    <string name="maps_size">Tamaño:</string>
+
+    <!-- Comunidad -->
+    <string name="community_title">Comunidad</string>
+    <string name="community_add_place">Añadir lugar</string>
+    <string name="community_edit">Editar</string>
+    <string name="community_confirm_open">Confirmar abierto</string>
+    <string name="community_report">Reportar error</string>
+    <string name="community_help_others">Quiero ayudar a otros</string>
+    <string name="community_contributions">Mis contribuciones</string>
+    <string name="community_message">Colaboremos para mejorar la información y ayudarnos en ruta.</string>
+
+    <!-- Información de lugares -->
+    <string name="place_schedule">Horario orientativo:</string>
+    <string name="place_usually_open">Suele abrir</string>
+    <string name="place_confirmed">Confirmado por comunidad</string>
+    <string name="place_last_update">Última actualización:</string>
+    <string name="place_contributed_by">Aportado por:</string>
+    <string name="place_fits_truck">Cabe camión/bus:</string>
+    <string name="place_approx_price">Precio aprox:</string>
+
+    <!-- Botones generales -->
+    <string name="btn_accept">Aceptar</string>
+    <string name="btn_cancel">Cancelar</string>
+    <string name="btn_save">Guardar</string>
+    <string name="btn_close">Cerrar</string>
+    <string name="btn_call">Llamar</string>
+    <string name="btn_navigate">Cómo llegar</string>
+    <string name="btn_share">Compartir</string>
+
+    <!-- Avisos legales -->
+    <string name="legal_title">Aviso y Comunidad</string>
+    <string name="legal_info_orientative">Información orientativa</string>
+    <string name="legal_community_data">Datos aportados por la comunidad</string>
+    <string name="legal_no_guarantee">No garantizamos horarios ni servicios</string>
+    <string name="legal_no_responsibility">No somos responsables de acuerdos entre usuarios</string>
+    <string name="legal_contact_only">Plataforma de contacto comunitario. No se garantiza asistencia.</string>
+
+    <!-- Privacidad -->
+    <string name="privacy_title">Privacidad Total</string>
+    <string name="privacy_message">La información se guarda en tu dispositivo.\nLa comunidad mejora los datos de forma voluntaria.</string>
+    <string name="privacy_no_login">Sin login obligatorio</string>
+    <string name="privacy_no_ads">Sin anuncios</string>
+    <string name="privacy_no_tracking">Sin tracking</string>
+
+    <!-- Regiones de España -->
+    <string name="region_andalucia">Andalucía</string>
+    <string name="region_aragon">Aragón</string>
+    <string name="region_asturias">Asturias</string>
+    <string name="region_baleares">Islas Baleares</string>
+    <string name="region_canarias">Canarias</string>
+    <string name="region_cantabria">Cantabria</string>
+    <string name="region_castilla_mancha">Castilla-La Mancha</string>
+    <string name="region_castilla_leon">Castilla y León</string>
+    <string name="region_cataluna">Cataluña</string>
+    <string name="region_extremadura">Extremadura</string>
+    <string name="region_galicia">Galicia</string>
+    <string name="region_la_rioja">La Rioja</string>
+    <string name="region_madrid">Madrid</string>
+    <string name="region_murcia">Murcia</string>
+    <string name="region_navarra">Navarra</string>
+    <string name="region_pais_vasco">País Vasco</string>
+    <string name="region_valenciana">Comunidad Valenciana</string>
+
+    <!-- Mensajes -->
+    <string name="msg_no_results">No se encontraron resultados</string>
+    <string name="msg_loading">Cargando…</string>
+    <string name="msg_offline_mode">Modo offline activo</string>
+    <string name="msg_sync_available">Sincronización disponible</string>
+    <string name="msg_contribution_saved">¡Gracias! Tu aporte ha sido guardado.</string>
+
+</resources>
