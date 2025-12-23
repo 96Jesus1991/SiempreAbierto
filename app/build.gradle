@@ -1,0 +1,129 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlin.kapt'
+}
+
+android {
+    namespace 'com.siempreabierto'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.siempreabierto"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0.0"
+
+        vectorDrawables {
+            useSupportLibrary true
+        }
+
+        // Room schema export
+        kapt {
+            arguments {
+                arg("room.schemaLocation", "$projectDir/schemas")
+            }
+        }
+    }
+
+    // Play Asset Delivery (mapas por regiones)
+    assetPacks = [
+        ":maps_andalucia",
+        ":maps_aragon",
+        ":maps_asturias",
+        ":maps_baleares",
+        ":maps_canarias",
+        ":maps_cantabria",
+        ":maps_castilla_la_mancha",
+        ":maps_castilla_y_leon",
+        ":maps_cataluna",
+        ":maps_extremadura",
+        ":maps_galicia",
+        ":maps_la_rioja",
+        ":maps_madrid",
+        ":maps_murcia",
+        ":maps_navarra",
+        ":maps_pais_vasco",
+        ":maps_valenciana"
+    ]
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    buildFeatures {
+        compose true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion '1.5.14'
+    }
+
+    packaging {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+dependencies {
+    // Kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.24"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3"
+
+    // Android Core
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.7.0'
+    implementation 'androidx.activity:activity-compose:1.8.2'
+
+    // Jetpack Compose BOM
+    implementation platform('androidx.compose:compose-bom:2024.02.00')
+    implementation 'androidx.compose.ui:ui'
+    implementation 'androidx.compose.ui:ui-graphics'
+    implementation 'androidx.compose.ui:ui-tooling-preview'
+    implementation 'androidx.compose.material3:material3'
+    implementation 'androidx.compose.material:material-icons-extended'
+
+    // Navigation Compose
+    implementation 'androidx.navigation:navigation-compose:2.7.7'
+
+    // Room Database (OFFLINE)
+    implementation 'androidx.room:room-runtime:2.6.1'
+    implementation 'androidx.room:room-ktx:2.6.1'
+    kapt 'androidx.room:room-compiler:2.6.1'
+
+    // Lifecycle & ViewModel
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-compose:2.7.0'
+
+    // Play Asset Delivery (para mapas on-demand)
+    implementation 'com.google.android.play:asset-delivery:2.2.1'
+    implementation 'com.google.android.play:asset-delivery-ktx:2.2.1'
+
+    // Location (GPS offline)
+    implementation 'com.google.android.gms:play-services-location:21.1.0'
+
+    // JSON parsing (para waypoints y POIs)
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+    // Debug
+    debugImplementation 'androidx.compose.ui:ui-tooling'
+    debugImplementation 'androidx.compose.ui:ui-test-manifest'
+}
