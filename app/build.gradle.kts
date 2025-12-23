@@ -1,0 +1,14 @@
+// Top-level build file for Siempre Abierto
+// App 100% OFFLINE para conductores
+
+plugins {
+    id("com.android.application") version "8.2.2" apply false
+    id("com.android.library") version "8.2.2" apply false
+    id("org.jetbrains.kotlin.android") version "1.9.24" apply false
+    id("org.jetbrains.kotlin.kapt") version "1.9.24" apply false
+    id("com.android.asset-pack") version "8.2.2" apply false
+}
+
+tasks.register<Delete>("clean") {
+    delete(rootProject.layout.buildDirectory)
+}
