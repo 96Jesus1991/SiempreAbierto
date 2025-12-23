@@ -1,4 +1,3 @@
-
 package com.siempreabierto.ui.screens.community
 
 import androidx.compose.foundation.clickable
