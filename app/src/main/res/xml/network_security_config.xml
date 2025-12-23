@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- 
+    Siempre Abierto - Configuración de red
+    La app funciona 100% OFFLINE, pero permite sincronización opcional
+    -->
+    
+    <!-- Configuración base: solo HTTPS -->
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+
+    <!-- Dominios permitidos para sincronización opcional -->
+    <domain-config cleartextTrafficPermitted="false">
+        <!-- OpenStreetMap para tiles (si se usa online) -->
+        <domain includeSubdomains="true">openstreetmap.org</domain>
+        <domain includeSubdomains="true">tile.openstreetmap.org</domain>
+        
+        <!-- Tu servidor para sincronización comunitaria (futuro) -->
+        <!-- <domain includeSubdomains="true">api.siempreabierto.es</domain> -->
+    </domain-config>
+
+</network-security-config>
