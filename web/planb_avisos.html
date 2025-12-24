@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Tablón de Avisos - En Ruta</title>
+    
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#D4AF37">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/planb.css">
+</head>
+<body>
+    <div class="planb-container">
+        <!-- Header -->
+        <header class="planb-header">
+            <a href="index.html" class="back-btn">← Inicio</a>
+            <h1 class="header-title">🚗 Tablón en Ruta</h1>
+        </header>
+
+        <!-- Aviso de seguridad -->
+        <div class="aviso-seguridad">
+            <p>⚠️ <strong>Seguridad:</strong> Queda siempre en lugares públicos. No subas a vehículos de desconocidos. En emergencias llama al <strong>112</strong>.</p>
+        </div>
+
+        <!-- Botón crear aviso -->
+        <button class="btn-crear-aviso" onclick="mostrarFormulario()">
+            ➕ Publicar Aviso
+        </button>
+
+        <!-- Formulario nuevo aviso -->
+        <div id="form-aviso" class="form-aviso" style="display:none;">
+            <h3>📝 Nuevo Aviso</h3>
+            
+            <div class="form-group">
+                <label>Tipo de aviso</label>
+                <select id="aviso-tipo">
+                    <option value="tirado">🚗 Tirado/Avería</option>
+                    <option value="corte">🚧 Corte de carretera</option>
+                    <option value="trafico">🚦 Tráfico/Retención</option>
+                    <option value="peligro">⚠️ Peligro</option>
+                    <option value="otro">📍 Otro</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Ubicación aproximada *</label>
+                <input type="text" id="aviso-zona" placeholder="Ej: A-7 salida Sagunto, cerca gasolinera Repsol" maxlength="200">
+                <small>⚠️ Usa puntos públicos (gasolinera, área de servicio, km). NO publiques direcciones exactas.</small>
+            </div>
+            
+            <div class="form-group">
+                <label>¿Qué necesitas?</label>
+                <input type="text" id="aviso-necesidad" placeholder="Ej: Rueda de repuesto, gasoil, remolque..." maxlength="200">
+            </div>
+            
+            <div class="form-group">
+                <label>Descripción adicional</label>
+                <textarea id="aviso-descripcion" placeholder="Más detalles..." maxlength="500"></textarea>
+            </div>
+            
+            <div class="form-buttons">
+                <button class="btn-cancelar" onclick="ocultarFormulario()">Cancelar</button>
+                <button class="btn-publicar" onclick="publicarAviso()">📤 Publicar</button>
+            </div>
+            
+            <p class="form-nota">ℹ️ Los avisos caducan en 24 horas automáticamente.</p>
+        </div>
+
+        <!-- Lista de avisos -->
+        <div id="lista-avisos" class="lista-avisos">
+            <div class="loading-spinner" id="loading-avisos"></div>
+        </div>
+
+        <!-- Sin avisos -->
+        <div id="sin-avisos" class="sin-avisos" style="display:none;">
+            <span class="emoji">🛣️</span>
+            <p>No hay avisos activos</p>
+            <small>¡Buenas noticias! La carretera está tranquila.</small>
+        </div>
+
+        <!-- Modal de éxito -->
+        <div id="modal-exito" class="modal" style="display:none;">
+            <div class="modal-content">
+                <div class="modal-icon">✅</div>
+                <h3>Aviso Publicado</h3>
+                <p>Tu aviso estará visible durante 24 horas.</p>
+                <div class="modal-info">
+                    <p><strong>Guarda este enlace</strong> para editar o eliminar tu aviso:</p>
+                    <input type="text" id="edit-url" readonly onclick="this.select()">
+                    <button class="btn-copiar-small" onclick="copiarEditUrl()">📋 Copiar</button>
+                </div>
+                <button class="btn-cerrar-modal" onclick="cerrarModal()">Entendido</button>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="planb-footer">
+            <p>🔄 Los avisos se actualizan cada minuto</p>
+            <p>Caduca automáticamente en 24h</p>
+        </footer>
+    </div>
+
+    <script src="js/planb_avisos.js"></script>
+</body>
+</html>

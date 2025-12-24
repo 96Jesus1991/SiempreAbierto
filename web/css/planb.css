@@ -1,0 +1,750 @@
+/**
+ * Plan B - Estilos específicos
+ * planb.css
+ */
+
+/* =========================================== */
+/* VARIABLES */
+/* =========================================== */
+:root {
+    --planb-primary: #D4AF37;
+    --planb-dark: #1a1a2e;
+    --planb-bg: #FFF8E7;
+    --planb-success: #4CAF50;
+    --planb-warning: #FF9800;
+    --planb-danger: #f44336;
+}
+
+/* =========================================== */
+/* CONTENEDOR */
+/* =========================================== */
+.planb-container {
+    min-height: 100vh;
+    background: var(--planb-bg);
+    padding-bottom: 40px;
+}
+
+.planb-header {
+    background: var(--planb-dark);
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.back-btn {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.header-title {
+    color: var(--planb-primary);
+    font-size: 18px;
+    margin: 0;
+}
+
+/* =========================================== */
+/* HERO */
+/* =========================================== */
+.planb-hero {
+    background: linear-gradient(135deg, var(--planb-dark) 0%, #16213e 100%);
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: var(--planb-primary);
+    color: var(--planb-dark);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.planb-hero h1 {
+    font-size: 42px;
+    margin: 0;
+    color: var(--planb-primary);
+    text-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+}
+
+.planb-hero h2 {
+    font-size: 20px;
+    margin: 5px 0 15px;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.hero-tagline {
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* =========================================== */
+/* PRECIO */
+/* =========================================== */
+.planb-precio {
+    padding: 0 20px;
+    margin-top: -30px;
+}
+
+.precio-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+}
+
+.precio-valor {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 5px;
+}
+
+.precio-cantidad {
+    font-size: 60px;
+    font-weight: bold;
+    color: var(--planb-dark);
+}
+
+.precio-moneda {
+    font-size: 30px;
+    color: var(--planb-primary);
+}
+
+.precio-periodo {
+    font-size: 18px;
+    color: #666;
+}
+
+.precio-iva {
+    margin: 10px 0 0;
+    color: #999;
+    font-size: 14px;
+}
+
+/* =========================================== */
+/* BENEFICIOS */
+/* =========================================== */
+.planb-beneficios {
+    padding: 30px 20px;
+}
+
+.planb-beneficios h3 {
+    text-align: center;
+    color: var(--planb-dark);
+    margin-bottom: 20px;
+}
+
+.beneficio {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    gap: 15px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.beneficio-icon {
+    font-size: 30px;
+    flex-shrink: 0;
+}
+
+.beneficio-info h4 {
+    color: var(--planb-dark);
+    margin: 0 0 5px;
+    font-size: 16px;
+}
+
+.beneficio-info p {
+    color: #666;
+    margin: 0;
+    font-size: 14px;
+}
+
+/* =========================================== */
+/* CTA */
+/* =========================================== */
+.planb-cta {
+    padding: 20px;
+    text-align: center;
+}
+
+.btn-planb-primary {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(135deg, var(--planb-primary) 0%, #B8962E 100%);
+    color: white;
+    border: none;
+    border-radius: 16px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-planb-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+}
+
+.btn-planb-primary span {
+    display: block;
+}
+
+.btn-planb-primary small {
+    display: block;
+    font-size: 14px;
+    opacity: 0.9;
+    margin-top: 5px;
+}
+
+.btn-planb-secondary {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: white;
+    color: var(--planb-primary);
+    border: 2px solid var(--planb-primary);
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-planb-secondary:hover {
+    background: var(--planb-primary);
+    color: white;
+}
+
+.cta-info {
+    margin-top: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+/* =========================================== */
+/* SEGURIDAD */
+/* =========================================== */
+.planb-seguridad {
+    padding: 0 20px 30px;
+}
+
+.seguridad-card {
+    background: #e8f5e9;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.seguridad-card h4 {
+    color: var(--planb-success);
+    margin: 0 0 15px;
+}
+
+.seguridad-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.seguridad-card li {
+    padding: 5px 0;
+    color: #2e7d32;
+}
+
+/* =========================================== */
+/* FOOTER */
+/* =========================================== */
+.planb-footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: #999;
+    font-size: 14px;
+}
+
+.footer-verse {
+    color: var(--planb-primary);
+    font-style: italic;
+    margin-top: 5px;
+}
+
+/* =========================================== */
+/* PÁGINA DE COMPRA */
+/* =========================================== */
+.estado-card {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #eee;
+    border-top-color: var(--planb-primary);
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.pago-header {
+    margin-bottom: 30px;
+}
+
+.pago-icon {
+    font-size: 50px;
+}
+
+.pago-header h2 {
+    color: var(--planb-dark);
+    margin: 10px 0 0;
+}
+
+.ref-card {
+    background: var(--planb-dark);
+    color: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.ref-label {
+    margin: 0 0 10px;
+    opacity: 0.8;
+    font-size: 14px;
+}
+
+.ref-code {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--planb-primary);
+    margin: 0 0 15px;
+    font-family: monospace;
+}
+
+.btn-copiar {
+    background: var(--planb-primary);
+    color: var(--planb-dark);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.instrucciones {
+    text-align: left;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.instrucciones h3 {
+    margin: 0 0 20px;
+    color: var(--planb-dark);
+}
+
+.paso {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.paso-num {
+    width: 30px;
+    height: 30px;
+    background: var(--planb-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.paso-info p {
+    margin: 0;
+}
+
+.telefono, .concepto {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--planb-dark);
+    background: #f5f5f5;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 8px 0;
+    font-family: monospace;
+}
+
+.btn-copiar-small {
+    background: #eee;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-confirmar {
+    margin-bottom: 20px;
+}
+
+.aviso-importante {
+    background: #fff3e0;
+    border-left: 4px solid var(--planb-warning);
+    padding: 15px;
+    text-align: left;
+    border-radius: 0 8px 8px 0;
+}
+
+.aviso-importante p {
+    margin: 0;
+    color: #e65100;
+    font-size: 14px;
+}
+
+/* Estado confirmado */
+.confirmado-icon {
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+.confirmado-msg {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.info-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: left;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.info-card p {
+    margin: 10px 0;
+}
+
+.siguiente-pasos {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.siguiente-pasos h4 {
+    margin: 0 0 15px;
+    color: var(--planb-dark);
+}
+
+.siguiente-pasos ul {
+    padding-left: 20px;
+}
+
+.siguiente-pasos li {
+    margin-bottom: 8px;
+    color: #666;
+}
+
+/* Error */
+.error-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+/* =========================================== */
+/* TABLÓN DE AVISOS */
+/* =========================================== */
+.aviso-seguridad {
+    background: #ffebee;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 13px;
+    color: #c62828;
+}
+
+.btn-crear-aviso {
+    display: block;
+    width: calc(100% - 40px);
+    margin: 20px auto;
+    padding: 15px;
+    background: var(--planb-primary);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.form-aviso {
+    background: white;
+    margin: 0 20px 20px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.form-aviso h3 {
+    margin: 0 0 20px;
+    color: var(--planb-dark);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--planb-primary);
+    outline: none;
+}
+
+.form-group small {
+    display: block;
+    margin-top: 5px;
+    color: var(--planb-warning);
+    font-size: 12px;
+}
+
+.form-group textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-cancelar {
+    flex: 1;
+    padding: 12px;
+    background: #eee;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-publicar {
+    flex: 2;
+    padding: 12px;
+    background: var(--planb-primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.form-nota {
+    margin: 15px 0 0;
+    font-size: 13px;
+    color: #999;
+    text-align: center;
+}
+
+.lista-avisos {
+    padding: 0 20px;
+}
+
+.aviso-card {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.aviso-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.aviso-tipo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.aviso-tipo-icon {
+    font-size: 24px;
+}
+
+.aviso-tipo-text {
+    font-weight: 600;
+    color: var(--planb-dark);
+}
+
+.aviso-tiempo {
+    font-size: 12px;
+    color: #999;
+}
+
+.aviso-zona {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.aviso-necesidad {
+    background: #fff3e0;
+    color: #e65100;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.aviso-descripcion {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.aviso-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.aviso-ayudantes {
+    font-size: 14px;
+    color: var(--planb-success);
+}
+
+.btn-ayudar {
+    padding: 8px 20px;
+    background: var(--planb-success);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn-ayudar:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.sin-avisos {
+    text-align: center;
+    padding: 60px 20px;
+    color: #999;
+}
+
+.sin-avisos .emoji {
+    font-size: 60px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.modal-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.modal-content h3 {
+    margin: 0 0 15px;
+    color: var(--planb-dark);
+}
+
+.modal-info {
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.modal-info input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+.btn-cerrar-modal {
+    width: 100%;
+    padding: 15px;
+    background: var(--planb-primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Comprar Plan B - Bizum</title>
+    
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#D4AF37">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/planb.css">
+</head>
+<body>
+    <div class="planb-container">
+        <!-- Header -->
+        <header class="planb-header">
+            <a href="planb_oferta.html" class="back-btn">← Volver</a>
+        </header>
+
+        <!-- Estado inicial: Cargando -->
+        <div id="estado-cargando" class="estado-card">
+            <div class="loading-spinner"></div>
+            <p>Generando tu referencia...</p>
+        </div>
+
+        <!-- Estado: Instrucciones de pago -->
+        <div id="estado-pago" class="estado-card" style="display:none;">
+            <div class="pago-header">
+                <span class="pago-icon">💳</span>
+                <h2>Pago por Bizum</h2>
+            </div>
+
+            <div class="ref-card">
+                <p class="ref-label">Tu referencia única</p>
+                <p class="ref-code" id="ref-code">ENRUTA------</p>
+                <button class="btn-copiar" onclick="copiarRef()">📋 Copiar</button>
+            </div>
+
+            <div class="instrucciones">
+                <h3>Sigue estos pasos:</h3>
+                
+                <div class="paso">
+                    <span class="paso-num">1</span>
+                    <div class="paso-info">
+                        <p>Abre tu app de <strong>Bizum</strong></p>
+                    </div>
+                </div>
+                
+                <div class="paso">
+                    <span class="paso-num">2</span>
+                    <div class="paso-info">
+                        <p>Envía <strong>5,00 €</strong> al número:</p>
+                        <p class="telefono" id="telefono">600 767 209</p>
+                        <button class="btn-copiar-small" onclick="copiarTelefono()">📋</button>
+                    </div>
+                </div>
+                
+                <div class="paso">
+                    <span class="paso-num">3</span>
+                    <div class="paso-info">
+                        <p>En el <strong>concepto</strong> escribe EXACTAMENTE:</p>
+                        <p class="concepto" id="concepto">EN RUTA ------</p>
+                        <button class="btn-copiar-small" onclick="copiarConcepto()">📋</button>
+                    </div>
+                </div>
+                
+                <div class="paso">
+                    <span class="paso-num">4</span>
+                    <div class="paso-info">
+                        <p>Cuando termines, pulsa el botón de abajo</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn-planb-primary btn-confirmar" id="btn-confirmar" onclick="confirmarPago()">
+                <span>✅ He hecho el Bizum</span>
+            </button>
+
+            <div class="aviso-importante">
+                <p>⚠️ <strong>Importante:</strong> El concepto debe ser exacto para identificar tu pago.</p>
+            </div>
+        </div>
+
+        <!-- Estado: Confirmado -->
+        <div id="estado-confirmado" class="estado-card" style="display:none;">
+            <div class="confirmado-icon">🎉</div>
+            <h2>¡Gracias!</h2>
+            <p class="confirmado-msg">Hemos recibido tu aviso de pago.</p>
+            
+            <div class="info-card">
+                <p>📋 Tu referencia: <strong id="ref-final">------</strong></p>
+                <p>⏱️ Verificaremos el Bizum en menos de 24 horas</p>
+                <p>📧 Tu suscripción se activará automáticamente</p>
+            </div>
+
+            <div class="siguiente-pasos">
+                <h4>Mientras tanto:</h4>
+                <ul>
+                    <li>Guarda tu referencia por si la necesitas</li>
+                    <li>Explora el tablón de avisos</li>
+                    <li>Vuelve pronto para ver tu estado</li>
+                </ul>
+            </div>
+
+            <a href="planb_avisos.html" class="btn-planb-secondary">
+                Ver Tablón de Avisos →
+            </a>
+        </div>
+
+        <!-- Estado: Error -->
+        <div id="estado-error" class="estado-card" style="display:none;">
+            <div class="error-icon">❌</div>
+            <h2>Error</h2>
+            <p id="error-mensaje">Ha ocurrido un error.</p>
+            <button class="btn-planb-secondary" onclick="reintentar()">Reintentar</button>
+        </div>
+    </div>
+
+    <script src="js/planb_pay.js"></script>
+</body>
+</html>
